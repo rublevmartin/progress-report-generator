@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+	position: relative;
+	display: inline-block;
+	border: 0;
+	margin: 10px;
+	padding: 15px 16px;
+	line-height: 1;
+	border-radius: 15px;
+	background-color: $dark-color;
+	color: $base-color;
+	font-size: 20px;
+	box-shadow: 0 3px 5px rgba($dark-color, 0.25);
+	transition: transform .3s, background-color .3s, box-shadow .3s;
+
+	&:hover {
+		z-index: 1;
+		background-color: $primary-color;
+		transform: scale(1.1);
+		cursor: pointer;
+		box-shadow: 0 0 20px 5px rgba($primary-color, 0.5);
+	}
+
+	&.active {
+		background-color: $accent-color;
+		box-shadow: 0 0 20px 5px rgba($accent-color, 0.5);
+	}
+}
