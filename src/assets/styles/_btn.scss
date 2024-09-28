@@ -14,7 +14,15 @@
 	color: $base-color;
 	font-size: 20px;
 	box-shadow: 0 3px 5px rgba($dark-color, 0.25);
-	transition: transform .3s, background-color .3s, box-shadow .3s;
+	transition: transform .3s, background-color .3s, box-shadow .3s, opacity .3s;
+
+	&--large {
+		padding: 20px;
+		border-radius: 20px;
+		text-transform: uppercase;
+		font-size: 22px;
+		font-weight: 700;
+	}
 
 	&:hover {
 		z-index: 1;
@@ -27,5 +35,10 @@
 	&.active {
 		background-color: $accent-color;
 		box-shadow: 0 0 20px 5px rgba($accent-color, 0.5);
+	}
+
+	&.disabled {
+		pointer-events: none;
+		opacity: 0.5;
 	}
 }

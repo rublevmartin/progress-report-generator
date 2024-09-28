@@ -3,31 +3,45 @@
     <AppHeader title="Progress Report Generator" description="by Martin R." />
 
     <main>
-      <AppIntro title="Welcome to the Progress Report Generator!"
-        text="Start by choosing Report that you want to view or download." step="1" />
+      <AppIntro :title="state.stepNumber === 1 ? 'Welcome to the Progress Report Generator!' : ''"
+        :text="state.texts[state.stepNumber - 1]" :step="state.stepNumber" />
 
       <div class="steps">
-        <StepOne />
+        <StepOne v-if="state.stepNumber === 1" />
 
-        <HelloWorld />
+        <StepTwo v-if="state.stepNumber === 2" />
+
+        <StepThree v-if="state.stepNumber === 3" />
       </div>
     </main>
+
+    <AppFooter />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import { state } from './store.js';
 import AppIntro from './components/AppIntro.vue';
 import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 import StepOne from './components/steps/StepOne.vue';
+import StepTwo from './components/steps/StepTwo.vue';
+import StepThree from './components/steps/StepThree.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     AppHeader,
+    AppFooter,
     AppIntro,
-    StepOne
+    StepOne,
+    StepTwo,
+    StepThree
+  },
+  setup() {
+    return {
+      state
+    };
   }
 }
 </script>
