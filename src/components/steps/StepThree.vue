@@ -2,7 +2,7 @@
   <div class="step">
     <div class="shell">
       <!-- Display the report HTML content above the download button -->
-      <div v-if="htmlReportContent.length > 0" class="report-preview">
+      <div v-if="htmlReportContent.length > 0" class="step__report">
         <div v-for="(page, index) in htmlReportContent" :key="index" v-html="page"></div>
       </div>
 
@@ -78,7 +78,6 @@ export default {
 
         if (data.pageCount !== undefined) {
           this.totalPages = data.pageCount;
-          console.log("Total Pages:", this.totalPages);
         } else {
           console.error("PageCount not found in the response.");
         }
@@ -160,14 +159,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.report-preview {
-  margin-bottom: 50px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  padding: 10px;
-  max-height: 500px;
-  overflow: auto;
-}
-</style>

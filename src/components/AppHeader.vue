@@ -27,10 +27,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .header {
     padding: 40px 0;
     text-align: center;
+
+    @media #{$mobile} {
+        padding: 20px 0 0;
+    }
 
     &__title {
         font-family: $font-title;
@@ -38,6 +42,10 @@ export default {
         color: $primary-color;
         text-shadow: 0 3px 5px rgba($dark-color, 0.25);
         font-size: 50px;
+
+        @media #{$mobile} {
+            font-size: 26px;
+        }
 
         &::before {
             content: '< ';
@@ -52,6 +60,10 @@ export default {
         font-family: $font-cursive;
         font-size: 30px;
         transform: rotate(-5deg) translateY(-20px);
+
+        @media #{$mobile} {
+            font-size: 22px;
+        }
     }
 }
 </style>

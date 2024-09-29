@@ -15,10 +15,14 @@
     </footer>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .footer {
-    padding: 50px 0;
+    padding: 50px 0 20px;
     text-align: center;
+
+    @media #{$mobile} {
+        padding: 30px 0 20px;
+    }
 
     &__actions {
         display: flex;

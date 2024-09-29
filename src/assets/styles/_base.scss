@@ -14,6 +14,10 @@ body {
 	font-size: $font-size-base;
 	line-height: $line-height-base;
 	color: $dark-color;	
+
+	@media #{$mobile} {
+		font-size: 18px;
+	}
 }
 
 a {

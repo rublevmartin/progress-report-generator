@@ -29,22 +29,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-.step {
-    padding: 50px 0 0;
-
-    &__buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: -10px;
-    }
-
-    &__loading {
-        padding: 43px 0;
-        text-align: center;
-        font-size: 20px;
-    }
-}
-</style>

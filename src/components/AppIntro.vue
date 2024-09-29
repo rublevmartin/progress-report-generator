@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .intro {
     text-align: center;
 
@@ -44,6 +44,18 @@ export default {
         text-transform: uppercase;
         font-family: $font-title;
         font-size: 32px;
+
+        @media #{$mobile} {
+            font-size: 22px;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+
+        @media #{$mobile} {
+            font-size: 20px;
+        }
     }
 }
 </style>

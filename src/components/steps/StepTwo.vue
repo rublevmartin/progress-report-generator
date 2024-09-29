@@ -27,7 +27,6 @@ export default {
         const response = await fetch("https://demos.telerik.com/reporting/api/reports/formats");
         formats.value = await response.json();
 
-        // Automatically select the first format and fulfill the step
         if (formats.value.length > 0) {
           selectedFormat.value = 0;
           state.selectedFormatFile = formats.value[0].name;
